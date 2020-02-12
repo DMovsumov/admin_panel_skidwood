@@ -1,0 +1,57 @@
+@import './vars.scss';
+
+.header {
+    .header_admin{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        
+        background-color: $header-color-admin;
+
+        h1 {
+            margin-left: 150px;
+        }
+
+        .header_admin-info {
+            
+        }
+    }
+
+    .header_menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // background-color: #fff;
+        transition: 0.5s;
+        transform: translateX(-100%);
+
+        .header_menu_btn {
+            width: 75px;
+            height: 75px;
+            background-image: url('../assets/icon_menu.png');
+            background-size: cover;
+            position: absolute;
+            right: -80px;
+            top: 6px;
+        }
+
+        .header_nav-list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50%;
+            flex-direction: column;
+        }
+
+        .menu_active {
+            transform: translateX(0%);
+        }
+    }
+}
